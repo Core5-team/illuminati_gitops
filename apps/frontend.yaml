@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://github.com/Core5-team/illuminati_helm_charts
+      targetRevision: CORE5-15-Install-and-Configure-ArgoCD-in-Existing-EKS-Cluster
+      path: frontend
+      helm:
+        valueFiles:
+          - values.yaml
+          - $env/frontend-values.yaml
+      ref: chart
+
+    - repoURL: https://github.com/Core5-team/illuminati_gitops
+      targetRevision: CORE5-15-Install-and-Configure-ArgoCD-in-Existing-EKS-Cluster
+      path: envs/prod
+      ref: env
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: illuminati
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

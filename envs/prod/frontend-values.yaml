@@ -1,0 +1,7 @@
+buildVersion: "1.0.27"
+dnsZones: door-store-moldova.pp.ua
+minReplicas: 1
+maxReplicas: 20
+cpuAverageUtilization: 70
+memoryAverageUtilization: 70
+
