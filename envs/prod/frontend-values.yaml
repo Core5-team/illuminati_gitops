@@ -1,4 +1,4 @@
-buildVersion: "1.0.27"
+buildVersion: "1.0.28"
 dnsZones: door-store-moldova.pp.ua
 minReplicas: 1
 maxReplicas: 20
