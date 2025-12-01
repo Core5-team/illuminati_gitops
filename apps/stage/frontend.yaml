@@ -13,7 +13,7 @@ spec:
       helm:
         valueFiles:
           - values.yaml
-          - $env/envs/prod/frontend-values.yaml
+          - $env/envs/stage/frontend-values.yaml
       ref: chart
 
     - repoURL: https://github.com/Core5-team/illuminati_gitops

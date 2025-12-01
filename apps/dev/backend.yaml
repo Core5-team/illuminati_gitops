@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: frontend
+  name: backend
   namespace: argocd
 spec:
   project: default
@@ -9,11 +9,11 @@ spec:
   sources:
     - repoURL: https://github.com/Core5-team/illuminati_helm_charts
       targetRevision: main
-      path: frontend
+      path: backend
       helm:
         valueFiles:
           - values.yaml
-          - $env/envs/prod/frontend-values.yaml
+          - $env/envs/dev/backend-values.yaml
       ref: chart
 
     - repoURL: https://github.com/Core5-team/illuminati_gitops
@@ -29,4 +29,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
 

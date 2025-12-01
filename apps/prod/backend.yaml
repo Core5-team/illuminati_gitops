@@ -8,7 +8,7 @@ spec:
 
   sources:
     - repoURL: https://github.com/Core5-team/illuminati_helm_charts
-      targetRevision: CORE5-15-Install-and-Configure-ArgoCD-in-Existing-EKS-Cluster
+      targetRevision: main
       path: backend
       helm:
         valueFiles:
@@ -17,7 +17,7 @@ spec:
       ref: chart
 
     - repoURL: https://github.com/Core5-team/illuminati_gitops
-      targetRevision: CORE5-15-Install-and-Configure-ArgoCD-in-Existing-EKS-Cluster
+      targetRevision: main
       path: .
       ref: env
 
