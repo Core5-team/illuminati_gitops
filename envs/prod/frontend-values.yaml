@@ -1,4 +1,4 @@
-buildVersion: 11
+buildVersion: 1
 dnsZones: door-store-moldova.pp.ua
 minReplicas: 1
 maxReplicas: 20
