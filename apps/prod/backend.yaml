@@ -18,7 +18,7 @@ spec:
 
     - repoURL: https://github.com/Core5-team/illuminati_gitops
       targetRevision: main
-      path: .
+      path: envs/prod
       ref: env
 
   destination:
