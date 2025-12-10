@@ -1,4 +1,4 @@
-buildVersion: 13
+buildVersion: 14
 minReplicas: 1
 maxReplicas: 20
 cpuAverageUtilization: 70
